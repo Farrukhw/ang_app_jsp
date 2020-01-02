@@ -1,0 +1,8 @@
+FROM tomcat
+
+LABEL "maintainer"="Farrukh Waheed <farrukhw@gmail.com>" \
+     "description"="Image based upon tomcat while deploying the application's war file."
+
+COPY ./target/*.war /usr/local/tomcat/webapps/
+
+EXPOSE 8080
